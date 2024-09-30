@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+html {
+	overflow-y: hidden !important;
+	background-image: url('../../assets/img/about-article-bg.jpg') !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.hero.is-success {
+	background: #f2f6fa;
+}
+.hero .nav,
+.hero.is-success .nav {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.box {
+	margin-top: 5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+input {
+	font-weight: 300;
+}
+p {
+	font-weight: 700;
+}
+p.subtitle {
+	padding-top: 1rem;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #bababa;
+}
+
+.languages {
+	margin-top: 10px;
+}
+
+.footer-text {
+	font-weight: initial;
+}
+
+.login-container .login-title {
+	font-size: 26px;
+	font-weight: 600;
+}
+
+.login-container input {
+	font-size: 16px;
+	font-weight: 600;
+}
+.login-container input::placeholder {
+	font-size: 16px;
+	font-weight: 600;
+}
+.login-container button[type='submit'] {
+	background-color: rgba(219, 30, 52, 255);
+}
+
+.login-container button[type='submit']:hover {
+	background-color: rgba(219, 30, 52, 255);
+	opacity: 0.8;
+}

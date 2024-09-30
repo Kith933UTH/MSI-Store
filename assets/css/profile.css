@@ -1,0 +1,339 @@
+/* category content  */
+.main-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: var(--small-size);
+	color: var(--white-color);
+	/* padding-top: calc(var(--header-height)); */
+	width: 100%;
+	flex: 1;
+}
+
+.main-content .title-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.main-content .profile-content {
+	padding-top: 2rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.profile-content .profile-select {
+	width: 24%;
+	height: fit-content;
+}
+
+.profile-content .profile-select .profile-select-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 4rem;
+}
+
+.profile-content .profile-select .profile-select-wrapper > li {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.profile-select-wrapper > li > a {
+	display: block;
+	padding: 1rem 0 1rem 2.4rem;
+	font-size: var(--medium-size);
+	width: 100%;
+}
+
+.profile-select-wrapper > li:first-child {
+	padding-top: 0.6rem;
+}
+
+.profile-select-wrapper > li:hover {
+	color: var(--primary-color);
+}
+.profile-content .profile-select .profile-select-wrapper > li.selected {
+	color: var(--primary-color);
+}
+
+/* infor  */
+
+.main-content .profile-content .profile-infor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	border-bottom: 0.2rem solid var(--primary-color);
+}
+
+.profile-content .profile-infor .profile-infor-avt {
+	margin-top: 2rem;
+	width: 7rem;
+	height: 7rem;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.profile-content .profile-infor .profile-infor-name {
+	font-size: var(--medium-size);
+	font-weight: 600;
+	margin: 1rem 0;
+}
+
+/* main  */
+.main-content .profile-content .profile-main {
+	flex: 1;
+	background-color: var(--sub-primary-bg-color);
+	border-radius: 0.4rem;
+	padding: 2rem;
+	margin-top: 2rem;
+	box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem rgba(255, 255, 255, 0.2);
+}
+
+.profile-content .profile-main .profile-main-title {
+	width: 100%;
+	height: 9rem;
+	border-bottom: 0.2rem solid var(--primary-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 2rem;
+}
+
+.profile-content .profile-main .profile-main-title .profile-title {
+	font-size: var(--big-size);
+	font-weight: 600;
+	color: var(--white-color);
+	margin-bottom: 1.2rem;
+}
+.profile-content .profile-main .profile-main-title .profile-title span {
+	color: var(--primary-color);
+}
+
+.profile-content .profile-main .profile-main-title .profile-description {
+	font-size: var(--medium-size);
+	font-weight: 500;
+	font-style: italic;
+	color: var(--white-color);
+	opacity: 0.7;
+}
+
+/* form  */
+.profile-content .profile-main .profile-update-form {
+	width: 100%;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile-main .profile-update-form .profile-input-wrapper {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.profile-update-form .profile-input-wrapper .profile-input-infor {
+	flex: 1;
+	border-right: 0.2rem solid rgba(255, 255, 255, 0.4);
+}
+
+.profile-update-form .profile-input-wrapper .profile-input-infor .input-box {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 30% auto;
+	margin-bottom: 2rem;
+	font-size: calc(var(--small-size) + 0.2rem);
+	color: var(--white-color);
+}
+.profile-input-wrapper .profile-input-infor .input-box div {
+	display: flex;
+	align-items: center;
+}
+
+.profile-input-wrapper .profile-input-infor .input-box div label {
+	margin-right: 2rem;
+}
+
+.profile-input-wrapper .profile-input-infor .input-box input,
+.profile-input-wrapper .profile-input-infor .input-box div.not-input {
+	background: none;
+	border: none;
+	color: var(--white-color);
+	font-size: inherit;
+	margin-right: 1rem;
+	margin-left: -1rem;
+	outline: none;
+	padding: 0.4rem 1rem;
+	flex: 1;
+}
+
+.profile-input-wrapper .profile-input-infor .input-box div.not-input {
+	user-select: none;
+	cursor: no-drop;
+}
+
+.profile-input-wrapper .profile-input-infor .input-box input:focus {
+	background-color: var(--white-color);
+	border: 0.1rem solid var(--primary-color);
+	color: var(--primary-color);
+	font-weight: 600;
+	border-radius: 0.4rem;
+}
+
+/* change avt  */
+.profile-update-form .profile-input-wrapper .profile-input-img {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	width: 30%;
+	position: relative;
+}
+
+.profile-input-wrapper .profile-input-img img.profile-avt {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 0.1rem solid rgba(255, 255, 255, 0.7);
+}
+
+.profile-input-wrapper .profile-input-img input[type='file'] {
+	display: none;
+}
+
+.profile-input-wrapper .profile-input-img .chang-avt-btn-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+	margin: 2rem 0 1rem;
+	width: 100%;
+}
+.profile-input-img .chang-avt-btn-wrapper label.change-avt-btn {
+	cursor: pointer;
+	border: 0.1rem solid rgba(255, 255, 255, 0.7);
+	border-radius: 0.3rem;
+	background-color: rgba(255, 255, 255, 0.4);
+	/* color: var(--white-color); */
+	padding: 0.6rem;
+}
+
+.profile-input-img .chang-avt-btn-wrapper label.change-avt-btn.reset {
+	display: none;
+}
+
+.profile-input-img .chang-avt-btn-wrapper label.change-avt-btn:hover {
+	background-color: var(--sub-primary-color);
+}
+
+.profile-input-wrapper .profile-input-img p {
+	font-style: italic;
+	opacity: 0.7;
+}
+
+/* gender  */
+.profile-input-wrapper .profile-input-infor .input-box div.user-gender {
+	display: block;
+	margin-left: 1rem;
+}
+
+.profile-input-infor .input-box div.user-gender input {
+	margin-right: 0.4rem;
+}
+
+.profile-input-infor .input-box div.user-gender label {
+	margin-right: 4rem;
+}
+
+/* button submit  */
+.profile-content .profile-main .profile-update-form button[type='submit'] {
+	cursor: pointer;
+	border: none;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	font-size: calc(var(--medium-size) - 0.2rem);
+	font-weight: 600;
+	padding: 0.6rem 1rem;
+	margin: 2rem 0 1rem;
+	border-radius: 0.6rem;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.profile-content
+	.profile-main
+	.profile-update-form
+	button[type='submit']:hover {
+	background-color: var(--sub-primary-color);
+}
+
+.profile-content
+	.profile-main
+	.profile-update-form
+	button[type='submit'].disable {
+	background-color: #ccc;
+	pointer-events: none;
+	color: var(--sub-primary-bg-color);
+}
+
+/* change password  */
+.profile-update-form
+	.profile-input-wrapper
+	.profile-input-infor.change-password {
+	border: none;
+}
+
+.profile-update-form
+	.profile-input-wrapper
+	.profile-input-infor.change-password
+	.input-box {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 30% auto;
+	margin-bottom: 2rem;
+	font-size: calc(var(--small-size) + 0.2rem);
+	color: var(--white-color);
+}
+.profile-input-wrapper .profile-input-infor.change-password .input-box div {
+	display: flex;
+	align-items: center;
+}
+
+.profile-input-wrapper
+	.profile-input-infor.change-password
+	.input-box
+	div
+	label {
+	margin-right: 2rem;
+}
+
+.profile-input-wrapper .profile-input-infor.change-password .input-box input,
+.profile-input-wrapper
+	.profile-input-infor.change-password
+	.input-box
+	div.not-input {
+	background-color: var(--white-color);
+	border: 0.1rem solid var(--primary-color);
+	color: var(--primary-color);
+	font-weight: 600;
+	border-radius: 0.4rem;
+	font-size: inherit;
+	margin-right: 1rem;
+	margin-left: -1rem;
+	outline: none;
+	padding: 0.4rem 1rem;
+}
+
+#error-mes {
+	color: var(--primary-color);
+	display: none;
+}

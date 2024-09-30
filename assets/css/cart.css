@@ -1,0 +1,359 @@
+/* cart  */
+.cart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(var(--header-height) + 6rem);
+  margin-bottom: 8rem;
+}
+.cart-container .shopping-cart {
+  background: var(--gradient-bg);
+  padding: 5rem 2rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(var(--small-size) - 0.2rem);
+  width: 80%;
+  position: relative;
+}
+
+.cart-container .cart-title {
+  font-size: calc(var(--medium-size) + 0.4rem);
+  color: var(--primary-color);
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  transform: translateY(-50%);
+  padding: 0.6rem;
+  border-radius: 2rem;
+
+  background-color: var(--primary-bg-color);
+}
+
+.cart-container .cart-title h3 {
+  background-color: rgba(62, 62, 62, 1);
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  border-bottom-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+  /* border-bottom: 1px solid #aaa; */
+  border-top: 2px solid #aaa;
+}
+
+.cart-container .cart-title .cart-title-before {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--primary-bg-color);
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateX(-100%);
+  border: none;
+  outline: none;
+  padding: none;
+  z-index: -1;
+}
+
+.cart-container .cart-title .cart-title-before::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(62, 62, 62, 1);
+  position: absolute;
+  border-top-right-radius: 1.6rem;
+  border: none;
+  outline: none;
+  padding: none;
+  z-index: inherit;
+}
+
+.cart-container .cart-title .cart-title-after {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--primary-bg-color);
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateX(100%);
+  border: none;
+  outline: none;
+  padding: none;
+  z-index: -1;
+}
+
+.cart-container .cart-title .cart-title-after::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(62, 62, 62, 1);
+  position: absolute;
+  border-top-left-radius: 1.6rem;
+  border: none;
+  outline: none;
+  padding: none;
+  z-index: inherit;
+}
+
+.cart-container .shopping-cart .cart-product {
+  width: 100%;
+  display: grid;
+  /* height: 10rem; */
+  color: var(--white-color);
+  grid-template-columns: 16% auto 16%;
+  gap: 1rem;
+  justify-items: center;
+  border-bottom: 0.1rem solid var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.shopping-cart .cart-product .cart-product-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shopping-cart .cart-product .cart-product-details {
+  justify-self: left;
+}
+
+.shopping-cart .cart-product .cart-product-image div {
+  width: 100%;
+  height: 10rem;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+.shopping-cart .cart-product .cart-product-image .cart-remove-product {
+  /* position: absolute; */
+  display: block;
+  width: fit-content;
+  padding: 0.4rem;
+  color: var(--primary-color);
+  border-radius: 0.4rem;
+  /* background-color: var(--sub-primary-bg-color); */
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .cart-product .cart-product-image .cart-remove-product:hover {
+  color: var(--sub-primary-color);
+}
+
+.cart-product .cart-product-details .cart-product-title {
+  font-size: calc(var(--medium-size) - 0.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.cart-product .cart-product-details .cart-product-description {
+  opacity: 0.6;
+}
+
+.cart-product .cart-product-price-quantity {
+  font-size: var(--small-size);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cart-product-price-quantity .cart-product-price .cart-product-current-price {
+  margin-bottom: 0.4rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.cart-product-price-quantity .cart-product-price .cart-product-old-price {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.cart-product .cart-product-price-quantity .cart-product-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cart-product .cart-product-price-quantity .cart-product-quantity > * {
+  width: 3rem;
+  border: 0.1rem solid var(--white-color);
+  padding: 0.6rem;
+  height: fit-content;
+  text-align: center;
+}
+
+.cart-product .cart-product-price-quantity .cart-product-quantity span {
+  font-weight: 500;
+}
+
+.cart-product
+  .cart-product-price-quantity
+  .cart-product-quantity
+  .product-quantity-change {
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.cart-product
+  .cart-product-price-quantity
+  .cart-product-quantity
+  .product-quantity-change:not(.disable):hover {
+  color: var(--sub-primary-color);
+  /* border: none; */
+  transform: scale(1.1);
+}
+
+.cart-product
+  .cart-product-price-quantity
+  .cart-product-quantity
+  .product-quantity-change.disable {
+  cursor: default;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.shopping-cart .totals {
+  font-size: var(--medium-size);
+  color: var(--white-color);
+  text-align: right;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.shopping-cart .totals span {
+  color: var(--primary-color);
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+/* delivery infor  */
+
+.cart-container .delivery-infor {
+  margin-top: 2rem;
+  background: var(--gradient-bg);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(var(--small-size) - 0.2rem);
+  width: 80%;
+  position: relative;
+}
+
+.cart-container .delivery-infor .delivery-infor-content {
+  width: 100%;
+  font-size: calc(var(--small-size));
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+
+.delivery-infor .delivery-infor-content form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delivery-infor .delivery-infor-content form .input-box {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.delivery-infor .delivery-infor-content form .input-box.full-grid {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.delivery-infor .delivery-infor-content form .input-box input {
+  width: 100%;
+  height: 4rem;
+  font-size: var(--small-size);
+  border-radius: 0.6rem;
+  outline: none;
+  color: var(--white-color);
+  padding: 0 1rem;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  caret-color: var(--primary-color);
+}
+
+.delivery-infor .delivery-infor-content form .input-box input:focus {
+  border-top: 0.3px solid rgba(255, 255, 255, 0.6);
+  border-left: 0.3px solid rgba(255, 255, 255, 0.6);
+}
+
+.delivery-infor
+  .delivery-infor-content
+  form
+  .input-box
+  input.has-value
+  ~ .details,
+.delivery-infor .delivery-infor-content form .input-box input:focus ~ .details {
+  top: 0;
+  font-size: calc(var(--small-size) - 0.2rem);
+  background-color: rgba(62, 62, 62, 1);
+  border-radius: 0.2rem;
+}
+
+.delivery-infor-content form .input-box .details {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 1.6rem;
+  transform: translateY(-50%);
+  color: var(--white-color);
+  transition: all 0.2s ease;
+}
+
+.delivery-infor-content form .submit-btn button[type="submit"] {
+  padding: 0.6rem 1.6rem;
+  color: var(--white-color);
+  font-size: var(--medium-size);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.6rem;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.delivery-infor-content form .submit-btn button[type="submit"]:hover {
+  background-color: var(--sub-primary-color);
+  border: none;
+}
+
+/* go back btn  */
+.go-back {
+  border: none;
+  outline: none;
+  background: none;
+  width: fit-content;
+  font-size: var(--medium-size);
+  color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(calc(-100% - 0.6rem));
+  cursor: pointer;
+}
+
+.go-back:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,72 @@
+.pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  background: var(--gradient-bg);
+  border-radius: 3rem;
+  padding: 1rem 1rem;
+  margin: 6rem 0 -3rem;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.4);
+  border-bottom: 0.1rem solid #ccc;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.pagination-wrapper button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: calc(var(--medium-size) - 0.2rem);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.pagination-wrapper button.disable {
+  cursor: default;
+  color: #726d6d;
+  pointer-events: none;
+}
+
+.pagination-wrapper button i {
+  font-size: calc(var(--medium-size) - 0.8rem);
+  margin: auto 0.6rem;
+}
+
+.pagination-wrapper button:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.pagination-wrapper .page-item {
+}
+
+.pagination-wrapper #page-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.pagination-wrapper .page-item label.selected {
+  background-color: var(--primary-color);
+  border: 0.1rem solid #ccc;
+  color: var(--white-color) !important;
+}
+
+.pagination-wrapper .page-item label {
+  display: inline-flex;
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--small-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination-wrapper .page-item label:hover {
+  color: var(--primary-color);
+}
